@@ -1,15 +1,16 @@
+import { Home } from './components/exports'
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import './App.css'
-import { Header, Footer, Content } from './components/exports'
 
 const App = () => {
     return (
-        <div className="mainContainer">
-            <div className="contentWrapper">
-                <Header />
-                <Content />
-                <Footer />
-            </div>
-        </div>);
+        <BrowserRouter>
+            <Routes>
+                <Route index element={<Home />} />
+                <Route path="*" element={<Navigate to="/" />} />
+            </Routes>
+        </BrowserRouter>
+    );
 }
 
 export default App;

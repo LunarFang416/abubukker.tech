@@ -1,16 +1,22 @@
+import resume from "../assets/resume.pdf";
+
 let info = {
     status: "Computer Engineering Student @ U of T, Currently open to work",
     contactInfo: [
         {
-            mode: 'Github',
+            mode: 'resume',
+            link: resume,
+        },
+        {
+            mode: 'github',
             link:'https://github.com/LunarFang416'
         },
         {
-            mode: 'Linkedin',
+            mode: 'linkedin',
             link:'https://www.linkedin.com/in/abubukker-chaudhary-b111591b7/'
         },
         {
-            mode: 'Email',
+            mode: 'email',
             link:'mailto:abubukker.chaudhary@gmail.com'
         }
     ],

@@ -6,7 +6,7 @@ const Header = () => {
             <div className="home">
                 <span className="t">&gt; $ cd ~</span>
             </div>        
-            {[...Array(50)].map(() => <div class="verticle-line"></div>)}
+            {[...Array(70)].map(() => <div class="verticle-line"></div>)}
         </div>
     )
 }

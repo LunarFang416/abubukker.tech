@@ -1,14 +1,14 @@
 .headerContainer{
     display: flex;
     top:0;
-    margin: 50px 0 0 0 ;
+    margin: 50px 0 40px 0 ;
 }
 
 .verticle-line {
-    width: 2px;
+    width: 3px;
     height: 40px;
     background: red;
-    margin: 0 10px;
+    margin: 0 6px;
 }
 
 .home{

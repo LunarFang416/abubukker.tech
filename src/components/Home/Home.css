@@ -1,0 +1,23 @@
+.mainContainer{
+  background-color: black;
+  margin:0;
+  padding:0;
+  width:100vw;
+  height:100vh;
+  display:flex;
+  justify-content: center;
+}
+
+.contentWrapper{
+  height:100vh;
+  width: 80%;
+  margin:0 auto;
+}
+
+.contact{
+  display:flex;
+}
+
+.contact_button{
+  margin-right: 10px;
+}
