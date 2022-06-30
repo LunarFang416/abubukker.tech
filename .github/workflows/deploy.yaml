@@ -3,6 +3,7 @@ on:
   push:
     paths:
       - "src/**"
+      - "public/**"
 
 jobs:
   Deploy:
