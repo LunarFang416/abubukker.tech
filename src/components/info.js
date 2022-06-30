@@ -1,5 +1,5 @@
 let info = {
-    status: "Computer Engineering @ U of T, Currently open to work",
+    status: "Computer Engineering Student @ U of T, Currently open to work",
     contactInfo: [
         {
             mode: 'Github',
