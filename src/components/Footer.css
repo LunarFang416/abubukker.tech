@@ -1,0 +1,9 @@
+.footerContainer{
+    bottom:0;
+    height: 90px;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
