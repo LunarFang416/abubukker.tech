@@ -7,7 +7,7 @@ on:
 
 jobs:
   Deploy:
-    name: Deploys site changes to AWS
+    name: AWS Deploy website 
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -26,7 +26,7 @@ jobs:
           node-version: '14'
       
       - name: Download Dependencies
-        run: npm installl
+        run: npm install
 
       - name: Build
         run: npm run build
