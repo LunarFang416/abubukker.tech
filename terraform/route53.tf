@@ -2,9 +2,21 @@ resource "aws_route53_zone" "route_zone" {
   name = var.domain
 }
 
-resource "aws_route53_record" "A" {
+resource "aws_route53_record" "www" {
   zone_id = aws_route53_zone.route_zone.zone_id
   name    = "www.${var.domain}"
+  type    = "A"
+
+  alias {
+    name                   = aws_cloudfront_distribution.frontend.domain_name
+    zone_id                = aws_cloudfront_distribution.frontend.hosted_zone_id
+    evaluate_target_health = false
+  }
+}
+
+resource "aws_route53_record" "root" {
+  zone_id = aws_route53_zone.route_zone.zone_id
+  name    = "${var.domain}"
   type    = "A"
 
   alias {

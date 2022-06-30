@@ -1,0 +1,37 @@
+name: Deploy Site
+on:
+  push:
+    paths:
+      - "src/**"
+
+jobs:
+  Deploy:
+    name: Deploys site changes to AWS
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_ACCESS_KEY_SECRET }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '14'
+      
+      - name: Download Dependencies
+        run: npm installl
+
+      - name: Build
+        run: npm run build
+
+      - name: Deploy site to S3
+        run: aws s3 cp build s3://${{ secrets.S3_BUCKET }} --recursive
+
+      - name: CloudFront Invalidation
+        run: aws cloudfront create-invalidation --distribution-id ${{ secrets.DISTRIBUTION_ID }} --paths "/*"
