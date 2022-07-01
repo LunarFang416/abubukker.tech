@@ -1,4 +1,4 @@
-Deployment architecture with infrastructure set up beforehand through terraform.
+## Deployment architecture with infrastructure set up beforehand through terraform.
 
 ```console
 +----------------------+    (push)    +-------------+                 
