@@ -34,6 +34,13 @@ resource "aws_cloudfront_distribution" "frontend" {
     viewer_protocol_policy = "redirect-to-https"
   }
 
+  custom_error_response {
+    error_code = 404
+    error_caching_min_ttl = 300
+    response_code = 200
+    response_page_path = "/index.html"
+  }
+
   viewer_certificate {
     acm_certificate_arn = aws_acm_certificate.domain_virginia.arn
     ssl_support_method  = "sni-only"
