@@ -1,12 +1,12 @@
 import './Header.css'
+import  { Link } from "react-router-dom"
 
 const Header = () => {
     return (
         <div className="headerContainer">
-            <div className="home">
-                <span className="t">&gt; $ cd ~</span>
-            </div>        
-            {[...Array(70)].map(() => <div class="verticle-line"></div>)}
+            <Link className="home_link" to="/">
+                <span className="home">&gt; $ cd ~</span>
+            </Link>
         </div>
     )
 }

@@ -1,7 +1,21 @@
 .headerContainer{
     display: flex;
     top:0;
-    margin: 50px 0 40px 0 ;
+    margin: 50px 0 20px 0 ;
+}
+
+.headerContainer::after{
+    content: "";
+    background: repeating-linear-gradient(90deg,red,red 3px,transparent 0,transparent 10px);
+    display: block;
+    width: 100%;
+    right: 10px
+}
+
+.home_link{
+    flex: 0 0 auto;
+    max-width: 100%;
+    text-decoration: none;
 }
 
 .verticle-line {
@@ -14,11 +28,8 @@
 .home{
     background-color: red;
     color:white !important;
-    width: 90px;
     height:30px;
     display: flex;
-    justify-content: center;
     align-items: center;
-    text-align: center;
-    padding:5px;
+    padding:5px 10px;
 }
