@@ -8,47 +8,51 @@ const Home = () => {
   return (
     <div className="contentWrapper">
       <Header />
-      <div className="introContainer">
+      <div className="mainContainer">
         <h2>
-          <bold>Abubukker Chaudhary</bold>
+          <b>Abubukker Chaudhary</b>
         </h2>
 
         <h4>{info.status}</h4>
         <hr
           style={{
-            color: "white",
-            backgroundColor: "white",
-            height: 0.01,
+            color: "##ff0000",
+            backgroundColor: "##ff0000",
+            height: 0.05,
+            borderColor: "#ff0000",
           }}
         />
         <p>&gt; $ contact</p>
-        <div class="contact">
-          {info.contactInfo.map((info) => {
+        <div className="contact">
+          {info.contactInfo.map((inf) => {
             return (
-              <p class="contact_button">
+              <p className="contact_button" key={inf.mode}>
                 [
-                <a href={info.link} target="_blank">
-                  {info.mode}
+                <a href={inf.link} target="_blank">
+                  {inf.mode}
                 </a>
                 ]
               </p>
             );
           })}
         </div>
+        <hr
+          style={{
+            color: "##ff0000",
+            backgroundColor: "##ff0000",
+            height: 0.05,
+            borderColor: "#ff0000",
+          }}
+        />
+        <p>&gt; $ recent</p>
+        <p>
+          - Collaborative learning environment at{" "}
+          <a href="https://www.oise.utoronto.ca/home">OISE</a> <br />- DSpace
+          repository management at <a href="https://www.isls.org/">ISLS</a>{" "}
+          <br />- Developing 3d architectural visualization at{" "}
+          <a href="https://seismic.skule.ca/">UofT Seismic</a>{" "}
+        </p>
       </div>
-      <div className="experienceContainer">
-        <p>&gt; $ experience</p>
-      </div>
-      <div className="experienceContainer">
-        <p>&gt; $ projects</p>
-      </div>
-      <hr
-        style={{
-          color: "white",
-          backgroundColor: "white",
-          height: 0.01,
-        }}
-      />
       <Footer />
     </div>
   );
