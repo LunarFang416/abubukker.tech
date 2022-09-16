@@ -9,11 +9,11 @@ const Home = () => {
     <div className="contentWrapper">
       <Header />
       <div className="mainContainer">
-        <h2>
+        <h1>
           <b>Abubukker Chaudhary</b>
-        </h2>
+        </h1>
 
-        <h4>{info.status}</h4>
+        <h3>{info.status}</h3>
         <hr
           style={{
             color: "##ff0000",
@@ -45,13 +45,20 @@ const Home = () => {
           }}
         />
         <p>&gt; $ recent</p>
-        <p>
-          - Collaborative learning environment at{" "}
-          <a href="https://www.oise.utoronto.ca/home">OISE</a> <br />- DSpace
-          repository management at <a href="https://www.isls.org/">ISLS</a>{" "}
-          <br />- Developing 3d architectural visualization at{" "}
-          <a href="https://seismic.skule.ca/">UofT Seismic</a>{" "}
-        </p>
+        <div>
+          <p>
+            - Collaborative learning environment at{" "}
+            <a href="https://www.oise.utoronto.ca/home"> OISE</a>
+          </p>
+          <p>
+            - DSpace repository management and automation at{" "}
+            <a href="https://www.isls.org/">ISLS</a>
+          </p>
+          <p>
+            - Developing 3D architectural visualization at{" "}
+            <a href="https://seismic.skule.ca/">UofT Seismic</a>
+          </p>
+        </div>
       </div>
       <Footer />
     </div>
