@@ -19,6 +19,14 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LunarFang416/abubukker.tech.git"
+  },
+  "bugs": {
+    "url": "https://github.com/LunarFang416/abubukker.tech/issues"
+  },
+  "homepage": "https://github.com/LunarFang416/abubukker.tech#readme",
   "eslintConfig": {
     "extends": [
       "react-app",
