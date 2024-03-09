@@ -47,6 +47,10 @@ const Home = () => {
         <p>&gt; $ recent</p>
         <div>
           <p>
+            - Building at{" "}
+            <a href="https://www.askorbit.a"i> OrbitAI</a>
+          </p>
+          <p>
             - Collaborative learning environment at{" "}
             <a href="https://www.oise.utoronto.ca/home"> OISE</a>
           </p>
